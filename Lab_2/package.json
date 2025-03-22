@@ -12,6 +12,7 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "@vitejs/plugin-basic-ssl": "^2.0.0"
+    "@vitejs/plugin-basic-ssl": "^2.0.0",
+    "three": "^0.174.0"
   }
 }
