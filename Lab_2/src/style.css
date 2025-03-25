@@ -7,23 +7,102 @@ body {
   line-height: 24px;
   overscroll-behavior: none;
 }
-a {
-  color: #ff0;
-  text-decoration: none;
+
+#menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 1000;
 }
-a:hover {
-  text-decoration: underline;
+
+#menu h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
+
+#menu button {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: Monospace;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  width: 200px;
+  text-align: center;
+}
+
+#menu button:hover {
+  background-color: #555;
+}
+
+#previewCanvas {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: #222;
+}
+
+#controls {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 button {
   cursor: pointer;
   text-transform: uppercase;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: Monospace;
+  font-size: 14px;
+  transition: background-color 0.3s;
 }
+
+button:hover {
+  background-color: #555;
+}
+
+#colorIndicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+#scaleIndicator {
+  font-size: 14px;
+  color: #ccc;
+}
+
 canvas {
   display: block;
-}
-a,
-button,
-input,
-select {
-  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
