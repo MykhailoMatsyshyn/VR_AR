@@ -13,6 +13,7 @@ export default {
     outDir: "dist",
     rollupOptions: {
       input: {
+        main: resolve(__dirname, "index.html"),
         task1: resolve(__dirname, "src/task1.html"),
         task2: resolve(__dirname, "src/task2.html"),
         task3: resolve(__dirname, "src/task3.html"),
