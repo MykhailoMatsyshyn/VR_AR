@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Lab 2 - Interactive 3D Model</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="task2-controls-wrapper">
+      <button id="toggleControlsBtn" class="task2-toggle-controls">
+        Show Controls
+      </button>
+      <div id="controls" class="task2-controls">
+        <div class="task2-button-group">
+          <button id="backBtn" class="task2-button">Back to Menu</button>
+          <button id="toggleRotationBtn" class="task2-button">
+            Enable Rotation
+          </button>
+          <select id="rotationAxis" class="task2-select">
+            <option value="y">Axis: Y</option>
+            <option value="x">Axis: X</option>
+            <option value="z">Axis: Z</option>
+          </select>
+          <select id="materialSelect" class="task2-select">
+            <option value="original">Material: Original</option>
+            <option value="gold">Material: Gold</option>
+            <option value="silver">Material: Silver</option>
+            <option value="emerald">Material: Emerald</option>
+            <option value="glass">Material: Glass</option>
+          </select>
+          <button id="toggleSceneLightBtn" class="task2-button">
+            Scene Light: On
+          </button>
+          <button id="toggleModelLightBtn" class="task2-button">
+            Model Light: On
+          </button>
+          <select id="modelLightType" class="task2-select">
+            <option value="point">Model Light: Point</option>
+            <option value="spot">Model Light: Spot</option>
+            <option value="directional">Model Light: Directional</option>
+          </select>
+          <label class="task2-label">
+            Model Light Intensity:
+            <input
+              type="range"
+              id="modelLightIntensity"
+              class="task2-range"
+              min="0"
+              max="10"
+              value="5"
+              step="0.1"
+            />
+          </label>
+          <label class="task2-label">
+            Model Light Color:
+            <input
+              type="color"
+              id="modelLightColor"
+              class="task2-color"
+              value="#ffffff"
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./task2.js"></script>
+  </body>
+</html>

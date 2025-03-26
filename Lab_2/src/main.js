@@ -1,11 +1,11 @@
 import "./style.css";
 
 document.getElementById("task1Btn").addEventListener("click", () => {
-  alert("Task 1 is not implemented yet.");
+  window.location.href = "src/task1.html";
 });
 
 document.getElementById("task2Btn").addEventListener("click", () => {
-  alert("Task 2 is not implemented yet.");
+  window.location.href = "src/task2.html";
 });
 
 document.getElementById("task3Btn").addEventListener("click", () => {
@@ -13,5 +13,5 @@ document.getElementById("task3Btn").addEventListener("click", () => {
 });
 
 document.getElementById("task4Btn").addEventListener("click", () => {
-  alert("Task 4 is not implemented yet.");
+  window.location.href = "src/task4.html";
 });

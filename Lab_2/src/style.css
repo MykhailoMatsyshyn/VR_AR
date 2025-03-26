@@ -70,6 +70,19 @@ body {
   gap: 10px;
 }
 
+.button-group-t1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.button-group-t1 button {
+  width: 100%;
+}
+
 button {
   cursor: pointer;
   text-transform: uppercase;
@@ -105,4 +118,185 @@ canvas {
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+/* Стилі для завдання 2 */
+/* Обгортка для панелі керування */
+.task2-controls-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Стилі для кнопки згортання/розгортання */
+.task2-toggle-controls {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background: linear-gradient(145deg, #555, #333);
+  color: #fff;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  font-family: Monospace;
+  font-size: 16px;
+  transition: background 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
+}
+
+.task2-toggle-controls:hover {
+  background: linear-gradient(145deg, #777, #444);
+}
+
+.task2-toggle-controls:active {
+  transform: scale(0.95);
+}
+
+/* Оновлені стилі для панелі керування */
+.task2-controls {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  max-height: 0;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+/* Стиль для розгорнутої панелі */
+.task2-controls.expanded {
+  max-height: 80vh;
+  overflow-y: auto;
+  visibility: visible;
+  padding: 10px;
+}
+
+/* Попередні стилі для завдання 2 (залишаються без змін) */
+.task2-button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.task2-button {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  background: linear-gradient(145deg, #444, #222);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: Monospace;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.1s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.task2-button:hover {
+  background: linear-gradient(145deg, #666, #333);
+}
+
+.task2-button:active {
+  transform: scale(0.95);
+}
+
+.task2-select {
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 8px;
+  font-family: Monospace;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.task2-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #fff;
+  font-family: Monospace;
+  font-size: 16px;
+}
+
+.task2-range {
+  width: 100%;
+  height: 8px;
+  background: #555;
+  border-radius: 5px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.task2-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.task2-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.task2-color {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  cursor: pointer;
+}
+
+/* Адаптація для малих екранів */
+@media (max-width: 600px) {
+  .task2-controls {
+    padding: 8px;
+  }
+
+  .task2-button-group {
+    max-width: 100%;
+  }
+
+  .task2-button,
+  .task2-select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .task2-label {
+    font-size: 14px;
+  }
+
+  .task2-toggle-controls {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
