@@ -1,8 +1,3 @@
 {
-  "rewrites": [
-    { "source": "/task1", "destination": "/task1.html" },
-    { "source": "/task2", "destination": "/task2.html" },
-    { "source": "/task3", "destination": "/task3.html" },
-    { "source": "/task4", "destination": "/task4.html" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
