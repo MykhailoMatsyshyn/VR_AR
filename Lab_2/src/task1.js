@@ -172,9 +172,9 @@ function init() {
   document
     .getElementById("toggleDirectionBtn")
     .addEventListener("click", toggleDirection);
-  document
-    .getElementById("specialEffectBtn")
-    .addEventListener("click", triggerSpecialEffect);
+  // document
+  //   .getElementById("specialEffectBtn")
+  //   .addEventListener("click", triggerSpecialEffect);
 
   window.addEventListener("resize", onWindowResize, false);
 }
